@@ -1,0 +1,337 @@
+def line( integer, string):
+    if string=="":
+        text= "*"*integer
+        print(text)
+    else:
+        text= string[0]*integer
+        print(text)
+def box_of_hashes(time):
+    #time=integer
+    while time>0:
+        line(10,"#")
+        time-=1
+        
+box_of_hashes(2)
+
+#######################
+def line( integer, string):
+    if string=="":
+        text= "*"*integer
+        print(text)
+    else:
+        text= string[0]*integer
+        print(text)
+def square_of_hashes(time):
+    integer=time
+    while time>0:
+        line(integer,"#")
+        time-=1
+        
+square_of_hashes(5)
+##########################
+
+def line( integer, string):
+    if string=="":
+        text= "*"*integer
+        print(text)
+    else:
+        text= string[0]*integer
+        print(text)
+def square(integer,string):
+    time=integer
+    while time>0:
+        line(integer,string)
+        time-=1
+        
+square(3,"o")
+
+#################################
+def line( integer, string):
+    if string=="":
+        text= "*"*integer
+        print(text)
+    else:
+        text= string[0]*integer
+        print(text)
+def triangle(time):
+    integer=time
+    time=1
+    while time<=integer:
+        line(time,"#")
+        time+=1
+        
+triangle(6)
+######################################
+
+def line( integer, string):
+    if string=="":
+        text= "*"*integer
+        print(text)
+    else:
+        text= string[0]*integer
+        print(text)
+def shape(integer1,string1,integer2,string2):
+    time=1
+    time2=1
+    while time<=integer1:
+        line(time,string1)
+        time+=1
+    while time2<=integer2:
+        line(integer1,string2)
+        time2+=1
+    
+        
+shape(5,"X",3,"*")
+
+###########################################
+
+def spruce(integer):
+    string="*"
+    spruce=integer*2
+    time=1
+    print("a spruce!")
+    while time<=spruce:
+        result=string*time
+        center = result.center(spruce)
+        print(center)
+        time+=2
+    center=string.center(spruce)
+    print(center)
+    
+spruce(5)
+#########################################################
+
+
+def greatest_number(number1,number2,number3):
+    if number1>number2 and number1>number3:
+        return number1
+    elif number2>number1 and number2>number3:
+        return number2
+    elif number3>number1 and number3>number2:
+        return number3
+    else:
+        return number1
+
+
+result= greatest_number(4,4,9)
+print(result)
+#######################################################
+def same_chars(string,int1,int2):
+    if len(string)<int1 or len(string)<int2:
+        return False
+    elif string[int1]==string[int2]:
+        return True
+    else:
+        return False
+result= same_chars("programmer", 0, 4)
+print(result)
+############################################
+def first_word(string):
+    word1=string.split(" ")[0]
+    return(word1)
+def second_word(string):
+    word2=string.split(" ")[1]
+    return(word2)
+def last_word(string):
+    word3=string.split(" ")[-1]
+    return(word3)
+sentence = "it was a dark and stormy python"
+print(first_word(sentence))
+print(second_word(sentence))
+print(last_word(sentence))
+#####################################################
+my_list=[1,2,3,4,5]
+while len(my_list)>=0:
+    index=int(input("Index:"))
+    if index==-1:
+        break
+    new_value=int(input("New Value:"))
+    my_list[index]=new_value
+    print(my_list)
+##########################################
+my_list=[]
+item_number= int(input("How many items:"))
+Item=1
+while Item<=item_number:
+    item=int(input(f'Item {Item}: '))
+    my_list.append(item)
+    Item+=1
+print(my_list)
+#########################################
+my_list=[]
+user_input=input(f"The list is now {my_list}")
+item=1
+while item>0:
+    choice=input("a(d)d, (r)emove or e(x)it:")
+    if choice=="x":
+        print("Bye!")
+        break
+    elif choice=="d":
+       my_list.append(item)
+       print (f'The list is now {my_list}')
+       item+=1
+       
+    elif choice=="r":
+        my_list.pop(-1)
+        print (f'The list is now {my_list}')
+        item-=1
+##################################################
+my_list=[]
+item=1
+while item>0:
+    user_input=input("Word:" )
+    if user_input in my_list:
+        break
+    my_list.append(user_input)
+    item+=1
+print(f'You typed in {len(my_list)} different words')
+#############################################################
+
+my_list=[]
+user_input=0
+while user_input>=0:
+    user_input=int(input("New item:" ))
+    if user_input==0:
+        print('Bye!')
+        break
+    else:
+        my_list.append(user_input)
+        print(f'The list now:{my_list}')
+        inorder=sorted(my_list)
+        print(f'The list in order:{inorder}')
+#################################################
+
+def length(mylist):
+    result=len(mylist)
+    print(f'The length is {result}')
+
+my_list=[1,1,1,1]
+result=length(my_list)
+
+#################################################
+
+def mean(mylist):
+    sum_list=sum(mylist)
+    mean_value=sum_list/len(mylist)
+    print("mean value is", mean_value)
+
+my_list=[1, 2, 3, 4, 5]
+result=mean(my_list)
+#####################################################
+def range_of_list(mylist):
+    largest_value=max(mylist)
+    smallest_value=min(mylist)
+    result= largest_value - smallest_value
+    print("The range of the list is", result)
+
+my_list=[1, 2, 3, 4, 5,6]
+result=range_of_list(my_list)
+#####################################################
+
+user_input= input("Please type in a string: ")
+for character in user_input:
+    print(character)
+    print("*")
+##################################################
+user_input= int(input("Please type in a positive integer: "))
+for i in range(-user_input, user_input+1, 1):
+    if i==0:
+        continue
+    print(i)
+##############################################
+20
+if __name__ == "__main__":
+    def list_of_stars(mylist):
+        for i in mylist:
+            print("*"*i)
+    list_of_stars([3, 7, 1, 1, 2])
+###############################################
+def anagrams(string1,string2):
+    if sorted(string1)== sorted(string2):
+        return True
+    else:
+        return False
+
+print(anagrams("tame", "meta")) # True
+print(anagrams("tame", "mate")) # True
+print(anagrams("tame", "team")) # True
+print(anagrams("tabby", "batty")) # False
+print(anagrams("python", "java")) # False
+###################################################
+def palindromes(string1):
+    if string1== string1[::-1]:
+        return (f'{string1}  is a palindrome!')
+    else:
+        return ("that wasn't a palindrome!")
+
+print(palindromes("python")) # True
+print(palindromes("oddoreven")) # True
+print(palindromes("java")) # True
+print(palindromes("neveroddoreven")) # True
+########################################################
+def sum_of_positives (mylist):
+    result=0
+    for i in mylist:
+        if i>=0:
+            result+=i
+    return (f"The result is {result}")
+my_list = [1, -2, 3, -4, 5]
+print (sum_of_positives (my_list))
+#########################################################
+def even_numbers (mylist):
+    new=[]
+    for i in mylist:
+        if i%2==0:
+            new.append(i)
+    print (f"Original {mylist}")
+    print (f"new {new}")
+my_list = [1,2,3,4,5]
+result= even_numbers (my_list)
+#########################################
+def list_sum(list1,list2):
+    new_list=[]
+    for i in range(0,len(list1)):
+        for j in range(0,len(list2)):
+            if i==j:
+                new_list.append(list1[i]+list2[j])
+    return new_list
+a = [1, 2, 3]
+b = [7, 8, 9]
+print(list_sum(a, b))
+###########################################
+
+def distinct_numbers (mylist):
+    distinct_number_list=[]
+    new_list=sorted(mylist)
+    for i in new_list:
+        if i in distinct_number_list:
+            continue
+        else:
+             distinct_number_list.append(i)
+    return distinct_number_list
+my_list = [3, 2, 2, 1, 3, 3, 1]
+print(distinct_numbers(my_list)) 
+########################################################
+def length_of_longest (my_list):
+    new_list=[]
+    for i in range (0,len(my_list)):
+        new_list.append(len(my_list[i]))
+        result=max(new_list)
+    return result
+    
+my_list = ["adele", "mark", "dorothy", "tim", "hedy", "richard"]
+result = length_of_longest(my_list)
+print(result)
+###################################################################
+def shortest (my_list):
+    string1=my_list[0]
+    for i in range (0,len(my_list)):
+        if len(my_list[i])<=len(string1):
+            result=my_list[i]
+            string1=my_list[i]
+    return result
+my_list = ["adele", "mark", "dorothy", "tim", "hedy", "richard"]
+
+result = shortest(my_list)
+print(result)
+###############################################################
